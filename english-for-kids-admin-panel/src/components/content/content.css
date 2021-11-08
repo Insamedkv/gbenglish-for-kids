@@ -1,0 +1,31 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 10px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .logo {
+    display: none;
+  }
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .switcher-box {
+    margin-top: 23px;
+  }
+}

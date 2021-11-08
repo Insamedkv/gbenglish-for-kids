@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/jsx-no-bind": [1, {
+      "ignoreRefs": true,
+      "allowArrowFunctions": true
+    }],
+    "react/destructuring-assignment": [0, "always", { "ignoreClassFields": true }],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "react/no-array-index-key" : "off",
+    "jsx-a11y/label-has-associated-control": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "jsx-a11y/label-has-for": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    // "react/jsx-filename-extension": [1, { "allow": "as-needed" }],
+    // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [0],
+    "react/prefer-stateless-function": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-control-regex": 0,
+    "no-plusplus": "off",
+    "no-console": "error",
+    "max-len": ["warn", { "code": 140 }],
+    "indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "@typescript-eslint/indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "import/prefer-default-export": "off",
+    "no-param-reassign": ["error", {
+      "props": false
+    }]
+  }
+}
